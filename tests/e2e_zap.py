@@ -76,7 +76,7 @@ alert_details = 't;t;t;t;t;t;f;f;f;f'
 source_info = 'Vulnerability Report for Flask_API;Abhay Bhargav;API Team;{};{};v1;v1;API Scan Report'.format(
     now, now)
 path = getcwd() + "/zap-report.json"
-zap.exportreport.generate(path, "json", sourcedetails=source_info,
+zap.reports.generate(path, "json", sourcedetails=source_info,
                           alertseverity=alert_severity, alertdetails=alert_details, scanid=active_scan_id)
 
 zap.core.shutdown()
