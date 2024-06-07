@@ -77,6 +77,6 @@ source_info = 'Vulnerability Report for Flask_API;Abhay Bhargav;API Team;{};{};v
     now, now)
 title = 'Vulnerability Report for Flask_API'
 path = getcwd() + "/zap-report.json"
-zap.reports.generate(path, "json", title=title,
+zap.reports.generate(path, fileformat="json", title=title,
                           alertseverity=alert_severity, alertdetails=alert_details, scanid=active_scan_id)
 zap.core.shutdown()
